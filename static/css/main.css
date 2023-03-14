@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-section{
+    width: 100%;
+    height: 60vh;
+    background-image: url('../img/main-bg.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    max-width: 2200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px 40px 0px 40px;
+}
+
+.section-text h1{
+    color: #E2EAFC;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 5.4rem;
+    width: 55vw;
+    line-height: 85px;
+    padding-right: 100px;
+}
+
+.section-text p{
+    color: #E2EAFC;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    width: 35vw;
+    margin-top: 30px;
+    line-height: 35px;
+}
+
+form{
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input-field{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    width: 55%;
+    border-radius: 5px;
+}
+
+.search{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-icon{
+    cursor: pointer;
+}
+
+button{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background-color: #EFBA0F;
+    width: 180px;
+    border-radius: 5px;
+    padding: 22px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-img{
+    width: 450px;
+    height: auto;
+    margin-top: 55px;
+}
+
+.result-section{
+    background-color: #003566;
+    background-image: url('../img/result-bg.svg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.websites{
+    width: 100%;
+    max-width: 1930px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 40px 100px 40px;
+    flex-wrap: wrap;
+}
+
+.box{
+    border: 3px solid #E2EAFC;
+    width: 480px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    margin: 40px 5px 0px 5px;
+}
+
+.box p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #E2EAFC;
+    font-size: 1.4rem;
+    padding-left: 40px;
+}
+
+.result-heading{
+    width: 100%;
+    max-width: 1820px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 70px;
+    padding-left: 55px;
+}
+
+.result-heading p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #E2EAFC;
+    font-size: 1.9rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1600px){
+    .section-text h1{
+        font-size: 3.6rem;
+        line-height: 55px;
+    }
+
+    .section-text p{
+        font-size: 1rem;
+        line-height: 26px;
+    }
+
+    .main-img{
+        width: 300px;
+    }
+
+    .result-heading p{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .section{
+        padding: 0;
+    }
+
+    .section-text h1{
+        font-size: 3.4rem;
+        line-height: 55px;
+        text-align: center;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .section-text p{
+        font-size: 1rem;
+        line-height: 26px;
+        text-align: center;
+        padding: 0;
+        width: 75vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .main-img{
+        display: none;
+    }
+
+    .result-heading p{
+        font-size: 1.3rem;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 495px){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-field{
+        width: 90%;
+    }
+
+    button{
+        width: 90%;
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+
+    .box{
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .section-text h1{
+        font-size: 2.8rem;
+    }
+
+    .box{
+        width: 290px;
+    }
+}

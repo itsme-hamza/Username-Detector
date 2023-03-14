@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Username Detector Web Scraper</title>
+{% endblock %}
+
+{% block style %}
+<style>
+    .box-instagram{
+        background-color: {{instagram}};
+    }
+    .box-reddit{
+        background-color: {{reddit}};
+    }
+    .box-pinterest{
+        background-color: {{pinterest}};
+    }
+    .box-youtube{
+        background-color: {{youtube}};
+    }
+    .box-twitter{
+        background-color: {{twitter}};
+    }
+    .box-snapchat{
+        background-color: {{snapchat}};
+    }
+    .box-spotify{
+        background-color: {{spotify}};
+    }
+    .box-github{
+        background-color: {{github}};
+    }
+    .box-steam{
+        background-color: {{steam}};
+    }
+    .box-tumblr{
+        background-color: {{tumblr}};
+    }
+    .box-twitch{
+        background-color: {{twitch}};
+    }
+    .box-myspace{
+        background-color: {{myspace}};
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="main-section">
+    <div class="section">
+        <div class="section-text">
+            <h1 class="main-title">Find the account you've forgotten about.</h1>
+            <p class="main-sub">Search for usernames and uncover more than a dozen of the most popular websites. Discover accounts you may have lost and forgotten.</p>
+            <form action="#" method="post">
+                <div class="input-field">
+                    <img class="search-icon" src="{{ url_for('static', filename='img/search-icon.svg') }}" alt="">
+                    <input class="search" type="text" name="input-user" placeholder="Enter a username...">
+                </div>
+                <button type="submit" value="submit">SEARCH</button>
+            </form>
+        </div>
+        <div class="section-img">
+            <img class="main-img" src="{{ url_for('static', filename='img/main-section-img.svg') }}" alt="main-img">
+        </div>
+    </div>
+</div>
+<div class="result-section">
+    <div class="result-heading">
+        <p>{{resultHeading}}</p>
+    </div>
+    <div class="websites">
+        <a href={{instagramUrl}} target="_blank">
+            <div class="box box-instagram">
+                <img src="../static/img/instagram.svg" alt="Instagram" class="instagram-logo">
+                <p>Instagram</p>
+            </div>
+        </a>
+        <a href={{redditUrl}} target="_blank">
+            <div class="box box-reddit">
+                <img src="../static/img/reddit.svg" alt="Reddit" class="reddit-logo">
+                <p>Reddit</p>
+            </div>
+        </a>
+        <a href={{pinterestUrl}} target="_blank">
+            <div class="box box-pinterest">
+                <img src="../static/img/pinterest.svg" alt="Pinterest" class="pinterest-logo">
+                <p>Pinterest</p>
+            </div>
+        </a>
+        <a href={{youtubeUrl}} target="_blank">
+            <div class="box box-youtube">
+                <img src="../static/img/youtube.svg" alt="Youtube" class="youtube-logo">
+                <p>Youtube</p>
+            </div>
+        </a>
+        <a href={{twitterUrl}} target="_blank"> 
+            <div class="box box-twitter">
+                <img src="../static/img/twitter.svg" alt="Twitter" class="twitter-logo">
+                <p>Twitter</p>
+            </div>
+        </a>
+        <a href={{snapchatUrl}} target="_blank">
+            <div class="box box-snapchat">
+                <img src="../static/img/snapchat.svg" alt="Snapchat" class="snapchat-logo">
+                <p>Snapchat</p>
+            </div>
+        </a>
+        <a href={{spotifyUrl}} target="_blank">
+            <div class="box box-spotify">
+                <img src="../static/img/spotify.svg" alt="Instagram" class="spotify-logo">
+                <p>Spotify</p>
+            </div>
+        </a>
+        <a href={{githubUrl}} target="_blank">
+            <div class="box box-github">
+                <img src="../static/img/github.svg" alt="Reddit" class="github-logo">
+                <p>Github</p>
+            </div>
+        </a>
+        <a href={{steamUrl}} target="_blank">
+            <div class="box box-steam">
+                <img src="../static/img/steam.svg" alt="Pinterest" class="steam-logo">
+                <p>Steam</p>
+            </div>
+        </a>
+        <a href={{tumblrUrl}} target="_blank">
+            <div class="box box-tumblr">
+                <img src="../static/img/tumblr.svg" alt="Youtube" class="tumblr-logo">
+                <p>Tumblr</p>
+            </div>
+        </a>
+        <a href={{twitchUrl}} target="_blank">
+            <div class="box box-twitch">
+                <img src="../static/img/twitch.svg" alt="Twitter" class="twitch-logo">
+                <p>Twitch</p>
+            </div>
+        </a>
+        <a href={{myspaceUrl}} target="_blank">
+            <div class="box box-myspace">
+                <img src="../static/img/myspace.svg" alt="Snapchat" class="myspace-logo">
+                <p>MySpace</p>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}
