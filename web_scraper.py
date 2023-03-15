@@ -30,17 +30,19 @@ def user(user):
         if username == "":
             return render_template('index.html')
         else:
-            return render_template('index.html', user=username, instagram=instagram(username), reddit=reddit(username), pinterest=pinterest(username)
-                            , youtube=youtube(username), twitter=twitter(username), snapchat=snapchat(username), spotify=spotify(username), github=github(username),
-                            steam=steam(username, session), tumblr=tumblr(username), twitch=twitch(username, session), myspace=myspace(username), resultHeading="Results for '" + username + "'",
+            return render_template('index.html', user=username, instagram=instagram(username), 
+                                #    reddit=reddit(username), pinterest=pinterest(username)
+                            # , youtube=youtube(username), twitter=twitter(username), snapchat=snapchat(username), spotify=spotify(username), github=github(username),
+                            # steam=steam(username, session), tumblr=tumblr(username), twitch=twitch(username, session), myspace=myspace(username), resultHeading="Results for '" + username + "'",
                             
                             # instagramUrl=instagramUrl(username), redditUrl=redditUrl(username), pinterestUrl=pinterestUrl(username), youtubeUrl=youtubeUrl(username), twitterUrl=twitterUrl(username), snapchatUrl=snapchatUrl(username),
                             # spotifyUrl=spotifyUrl(username), githubUrl=githubUrl(username), steamUrl=steamUrl(username, session), tumblrUrl=tumblrUrl(username), twitchUrl=twitchUrl(username, session), myspaceUrl=myspaceUrl(username)
                             )
     else:
-        return render_template('index.html', user=user, instagram=instagram(user), reddit=reddit(user), pinterest=pinterest(user)
-                            , youtube=youtube(user), twitter=twitter(user), snapchat=snapchat(user), spotify=spotify(user), github=github(user),
-                            steam=steam(user, session), tumblr=tumblr(user), twitch=twitch(user, session), myspace=myspace(user), resultHeading="Results for '" + user + "'",
+        return render_template('index.html', user=user, instagram=instagram(user), 
+                            #    reddit=reddit(user), pinterest=pinterest(user)
+                            # , youtube=youtube(user), twitter=twitter(user), snapchat=snapchat(user), spotify=spotify(user), github=github(user),
+                            # steam=steam(user, session), tumblr=tumblr(user), twitch=twitch(user, session), myspace=myspace(user), resultHeading="Results for '" + user + "'",
                             
                             # instagramUrl=instagramUrl(user), redditUrl=redditUrl(user), pinterestUrl=pinterestUrl(user), youtubeUrl=youtubeUrl(user), twitterUrl=twitterUrl(user), snapchatUrl=snapchatUrl(user),
                             # spotifyUrl=spotifyUrl(user), githubUrl=githubUrl(user), steamUrl=steamUrl(user, session), tumblrUrl=tumblrUrl(user), twitchUrl=twitchUrl(user, session), myspaceUrl=myspaceUrl(user)
