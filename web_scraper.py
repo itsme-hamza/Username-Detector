@@ -31,19 +31,23 @@ def user(user):
             return render_template('index.html')
         else:
             return render_template('index.html', user=username, instagram=instagram(username),  reddit=reddit(username), pinterest=pinterest(username)
-                            # , youtube=youtube(username), twitter=twitter(username), snapchat=snapchat(username), spotify=spotify(username), github=github(username),
-                            # steam=steam(username, session), tumblr=tumblr(username), twitch=twitch(username, session), myspace=myspace(username), resultHeading="Results for '" + username + "'",
+                            , youtube=youtube(username), twitter=twitter(username), snapchat=snapchat(username), spotify=spotify(username), github=github(username),
+                            steam=steam(username, session), 
+                            #tumblr=tumblr(username), twitch=twitch(username, session), myspace=myspace(username), 
+                            resultHeading="Results for '" + username + "'",
                             
-                            # instagramUrl=instagramUrl(username), redditUrl=redditUrl(username), pinterestUrl=pinterestUrl(username), youtubeUrl=youtubeUrl(username), twitterUrl=twitterUrl(username), snapchatUrl=snapchatUrl(username),
-                            # spotifyUrl=spotifyUrl(username), githubUrl=githubUrl(username), steamUrl=steamUrl(username, session), tumblrUrl=tumblrUrl(username), twitchUrl=twitchUrl(username, session), myspaceUrl=myspaceUrl(username)
+                            instagramUrl=instagramUrl(username), redditUrl=redditUrl(username), pinterestUrl=pinterestUrl(username), youtubeUrl=youtubeUrl(username), twitterUrl=twitterUrl(username), snapchatUrl=snapchatUrl(username),
+                            spotifyUrl=spotifyUrl(username), githubUrl=githubUrl(username), steamUrl=steamUrl(username, session), tumblrUrl=tumblrUrl(username), twitchUrl=twitchUrl(username, session), myspaceUrl=myspaceUrl(username)
                             )
     else:
         return render_template('index.html', user=user, instagram=instagram(user), reddit=reddit(user), pinterest=pinterest(user)
-                            # , youtube=youtube(user), twitter=twitter(user), snapchat=snapchat(user), spotify=spotify(user), github=github(user),
-                            # steam=steam(user, session), tumblr=tumblr(user), twitch=twitch(user, session), myspace=myspace(user), resultHeading="Results for '" + user + "'",
+                            , youtube=youtube(user), twitter=twitter(user), snapchat=snapchat(user), spotify=spotify(user), github=github(user),
+                            steam=steam(user, session), 
+                            #tumblr=tumblr(user), twitch=twitch(user, session), myspace=myspace(user), 
+                            resultHeading="Results for '" + user + "'",
                             
-                            # instagramUrl=instagramUrl(user), redditUrl=redditUrl(user), pinterestUrl=pinterestUrl(user), youtubeUrl=youtubeUrl(user), twitterUrl=twitterUrl(user), snapchatUrl=snapchatUrl(user),
-                            # spotifyUrl=spotifyUrl(user), githubUrl=githubUrl(user), steamUrl=steamUrl(user, session), tumblrUrl=tumblrUrl(user), twitchUrl=twitchUrl(user, session), myspaceUrl=myspaceUrl(user)
+                            instagramUrl=instagramUrl(user), redditUrl=redditUrl(user), pinterestUrl=pinterestUrl(user), youtubeUrl=youtubeUrl(user), twitterUrl=twitterUrl(user), snapchatUrl=snapchatUrl(user),
+                            spotifyUrl=spotifyUrl(user), githubUrl=githubUrl(user), steamUrl=steamUrl(user, session), tumblrUrl=tumblrUrl(user), twitchUrl=twitchUrl(user, session), myspaceUrl=myspaceUrl(user)
                             )
 
 # instagram
@@ -276,65 +280,65 @@ def myspace(user):
     except urllib.error.HTTPError:
         return "red"
     
-# def instagramUrl(user):
-#     if instagram(user):
-#         instagramUrl = "https://www.instagram.com/" + user
-#     return instagramUrl
+def instagramUrl(user):
+    if instagram(user):
+        instagramUrl = "https://www.instagram.com/" + user
+    return instagramUrl
     
-# def redditUrl(user):
-#     if reddit(user):
-#         redditUrl = "https://www.reddit.com/r/" + user
-#     return redditUrl
+def redditUrl(user):
+    if reddit(user):
+        redditUrl = "https://www.reddit.com/r/" + user
+    return redditUrl
 
-# def pinterestUrl(user):
-#     if pinterest(user):
-#         pinterestUrl = "https://www.pinterest.co.uk/" + user
-#     return pinterestUrl
+def pinterestUrl(user):
+    if pinterest(user):
+        pinterestUrl = "https://www.pinterest.co.uk/" + user
+    return pinterestUrl
 
-# def youtubeUrl(user):
-#     if youtube(user):
-#         youtubeUrl = "https://www.youtube.com/@" + user
-#     return youtubeUrl
+def youtubeUrl(user):
+    if youtube(user):
+        youtubeUrl = "https://www.youtube.com/@" + user
+    return youtubeUrl
 
-# def twitterUrl(user):
-#     if twitter(user):
-#         twitterUrl = "https://twitter.com/" + user
-#     return twitterUrl
+def twitterUrl(user):
+    if twitter(user):
+        twitterUrl = "https://twitter.com/" + user
+    return twitterUrl
 
-# def snapchatUrl(user):
-#     if snapchat(user):
-#         snapchatUrl = "https://www.snapchat.com/add/" + user
-#     return snapchatUrl
+def snapchatUrl(user):
+    if snapchat(user):
+        snapchatUrl = "https://www.snapchat.com/add/" + user
+    return snapchatUrl
 
-# def spotifyUrl(user):
-#     if spotify(user):
-#         spotifyUrl = "https://open.spotify.com/user/" + user
-#     return spotifyUrl
+def spotifyUrl(user):
+    if spotify(user):
+        spotifyUrl = "https://open.spotify.com/user/" + user
+    return spotifyUrl
 
-# def githubUrl(user):
-#     if github(user):
-#         githubUrl = "https://github.com/" + user
-#     return githubUrl
+def githubUrl(user):
+    if github(user):
+        githubUrl = "https://github.com/" + user
+    return githubUrl
 
-# def steamUrl(user, session):
-#     if steam(user, session):
-#         steamUrl = "https://steamcommunity.com/search/users/#text=" + user
-#     return steamUrl
+def steamUrl(user, session):
+    if steam(user, session):
+        steamUrl = "https://steamcommunity.com/search/users/#text=" + user
+    return steamUrl
 
-# def tumblrUrl(user):
-#     if tumblr(user):
-#         tumblrUrl = "https://www.tumblr.com/" + user
-#     return tumblrUrl
+def tumblrUrl(user):
+    if tumblr(user):
+        tumblrUrl = "https://www.tumblr.com/" + user
+    return tumblrUrl
 
-# def twitchUrl(user, session):
-#     if twitch(user, session):
-#         twitchUrl = "https://m.twitch.tv/search?term=" + user + "&type=channels"
-#     return twitchUrl
+def twitchUrl(user, session):
+    if twitch(user, session):
+        twitchUrl = "https://m.twitch.tv/search?term=" + user + "&type=channels"
+    return twitchUrl
 
-# def myspaceUrl(user):
-#     if myspace(user):
-#         myspaceUrl = "https://myspace.com/" + user
-#     return myspaceUrl
+def myspaceUrl(user):
+    if myspace(user):
+        myspaceUrl = "https://myspace.com/" + user
+    return myspaceUrl
         
 if __name__ == "__main__":
     app.run(threaded=False, host='0.0.0.0')
