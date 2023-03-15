@@ -5,6 +5,7 @@ import urllib.request
 import snscrape.modules.twitter as twitterScraper
 from requests_html import HTMLSession
 from flask import Flask, render_template, url_for, request, redirect
+from time import sleep
 
 app = Flask(__name__)
 
