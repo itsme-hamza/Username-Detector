@@ -30,8 +30,7 @@ def user(user):
         if username == "":
             return render_template('index.html')
         else:
-            return render_template('index.html', user=username, instagram=instagram(username), 
-                                #    reddit=reddit(username), pinterest=pinterest(username)
+            return render_template('index.html', user=username, instagram=instagram(username),  reddit=reddit(username), pinterest=pinterest(username)
                             # , youtube=youtube(username), twitter=twitter(username), snapchat=snapchat(username), spotify=spotify(username), github=github(username),
                             # steam=steam(username, session), tumblr=tumblr(username), twitch=twitch(username, session), myspace=myspace(username), resultHeading="Results for '" + username + "'",
                             
@@ -39,8 +38,7 @@ def user(user):
                             # spotifyUrl=spotifyUrl(username), githubUrl=githubUrl(username), steamUrl=steamUrl(username, session), tumblrUrl=tumblrUrl(username), twitchUrl=twitchUrl(username, session), myspaceUrl=myspaceUrl(username)
                             )
     else:
-        return render_template('index.html', user=user, instagram=instagram(user), 
-                            #    reddit=reddit(user), pinterest=pinterest(user)
+        return render_template('index.html', user=user, instagram=instagram(user), reddit=reddit(user), pinterest=pinterest(user)
                             # , youtube=youtube(user), twitter=twitter(user), snapchat=snapchat(user), spotify=spotify(user), github=github(user),
                             # steam=steam(user, session), tumblr=tumblr(user), twitch=twitch(user, session), myspace=myspace(user), resultHeading="Results for '" + user + "'",
                             
@@ -49,7 +47,7 @@ def user(user):
                             )
 
 # instagram
-def instagram(user):
+def instagram(user):   
     # get results of the webpage from the url
     url = "https://www.instagram.com/" + user
     try:
