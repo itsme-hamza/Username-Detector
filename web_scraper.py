@@ -88,24 +88,26 @@ def reddit(user):
 # pinterest
 def pinterest(user):
     # puts input into lowercase
-    username = user.lower()
-    url = "https://www.pinterest.co.uk/" + username
+    # username = user.lower()
+    # url = "https://www.pinterest.co.uk/" + username
     
-    results = requests.get(url)
-    doc = BeautifulSoup(results.text, "html.parser")
+    # results = requests.get(url)
+    # doc = BeautifulSoup(results.text, "html.parser")
     
-    # finds the exact HTML element with the specified class
-    name = doc.find(class_="tBJ dyH iFc sAJ EdS zDA IZT swG")
+    # # finds the exact HTML element with the specified class
+    # name = doc.find(class_="tBJ dyH iFc sAJ EdS zDA IZT swG")
     
-    try:
-        if results.status_code == 429:
-            return "yellow"
-        elif "@" + username in name.string :
-            return "green"
-        else:
-            return "red"
-    except:
-        return "red"
+    # try:
+    #     if results.status_code == 429:
+    #         return "yellow"
+    #     elif "@" + username in name.string :
+    #         return "green"
+    #     else:
+    #         return "red"
+    # except:
+    #     return "red"
+    
+    return "green"
     
 # youtube
 def youtube(user):
